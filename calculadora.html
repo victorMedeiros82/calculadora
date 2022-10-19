@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--css bootstrap-->
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGAÇÃO-->
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--SEÇÃO PRINCIPAL-->
+    <main class="container bg-light shadow-lg rounded-5 border border-1">
+        <section class="d-flex flex-column align-items-center">
+            <!--INPUT RESULTADO-->
+            <input id="display" value="" placeholder="0" class="form-control form-control-lg w-100" type="text"
+                disabled="disabled">
+            <!--BOTOES-->
+            <section id="teclado"
+                class="d-flex flex-column align-items-md-stretch border border-1 rounded-4 p-3 m-3 w-75">
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group" placeholder="0">
+                    <button onclick="adicionar('%')" id="btnPorcent" type="button"
+                        class="btn btn-outline-dark">%</button>
+                    <button onclick="potencia()" id="eleva2" type="button" class="btn btn-outline-dark">X²</button>
+                    <button onclick="limpar()" id="limparCal" type="button" class="btn btn-outline-dark">C</button>
+                    <button onclick="adicionar('/')" id="Op/" type="button" class="btn btn-outline-dark">÷</button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button onclick="adicionar(7)" id="num7" type="button" class="btn btn-outline-dark">7</button>
+                    <button onclick="adicionar(8)" id="num8" type="button" class="btn btn-outline-dark">8</button>
+                    <button onclick="adicionar(9)" id="num9" type="button" class="btn btn-outline-dark">9</button>
+                    <button onclick="adicionar('*')" id="opX" type="button" class="btn btn-outline-dark">X</button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button onclick="adicionar(4)" id="num4" type="button" class="btn btn-outline-dark">4</button>
+                    <button onclick="adicionar(5)" id="num5" type="button" class="btn btn-outline-dark">5</button>
+                    <button onclick="adicionar(6)" id="num6" type="button" class="btn btn-outline-dark">6</button>
+                    <button onclick="adicionar('+')" id="op+" type="button" class="btn btn-outline-dark">+</button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button onclick="adicionar(1)" id="num1" type="button" class="btn btn-outline-dark">1</button>
+                    <button onclick="adicionar(2)" id="num2" type="button" class="btn btn-outline-dark">2</button>
+                    <button onclick="adicionar(3)" id="num3" type="button" class="btn btn-outline-dark">3</button>
+                    <button onclick="adicionar('-')" id="op-" type="button" class="btn btn-outline-dark">-</button>
+                </div>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button onclick="adicionar(0)" id="num0" type="button" class="btn btn-outline-dark">0</button>
+                    <button onclick="adicionar(',')" id="op." type="button" class="btn btn-outline-dark">.</button>
+                    <button onclick="resultado()" id="op=" type="button" class="btn btn-outline-dark">=</button>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<!--JS-->
+    <script src="js/calc.js"></script>
+</body>
+
+</html>
